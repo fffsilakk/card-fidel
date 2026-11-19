@@ -1,0 +1,27 @@
+---
+import Layout  from "../layouts/Layout.astro";
+import  ProfileCard  from "../components/ProfileCard.astro";
+import { email } from "astro:schema";
+
+const profil = {
+    nama: 'aaaaaaa',
+    kelas: 'XI RPL',
+    bio : 'belajar Astro',
+    foto: '',
+    keahlian: ['Android Developer', 'Fullstack Developer'],
+    github: 'https://github.com/fffsilakk',
+    email: 'abcde@gmail.com',
+};
+---
+
+<Layout judul={`Profil ${profil.nama}`}>
+    <ProfileCard 
+        nama={profil.nama} 
+        kelas={profil.kelas} 
+        bio={profil.bio}
+        foto={profil.foto}  
+        keahlian={profil.keahlian}  
+        github={profil.github}  
+        email={profil.email}
+    />
+</Layout>
